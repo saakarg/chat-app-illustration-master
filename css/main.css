@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --main: hsl(271, 36%, 24%);
+  --light: hsl(270, 7%, 64%);
+  --lightMagenta: hsl(293, 100%, 63%);
+  --lightViolet: hsl(264, 100%, 61%);
+  --chatLeft: hsl(276, 55%, 52%);
+  --chatRight: hsl(271, 15%, 43%);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*Back and Option button Phone App Header*/
+.back,
+.option {
+  color: white;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 530px;
+  height: 580px;
+  z-index: -1;
+  background: linear-gradient(225deg, var(--lightMagenta), var(--lightViolet));
+  border-radius: 0 0 300px 300px;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  width: 530px;
+  height: 580px;
+  z-index: -1;
+  background: linear-gradient(225deg, #f7f5fa, #f7f5fa);
+  border-radius: 300px 300px 0 0;
+  -webkit-transform: translateX(6%);
+          transform: translateX(6%);
+  bottom: 0px;
+  right: -4%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 4.3rem;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#phone {
+  height: 506px;
+  width: 230px;
+  padding: 6px;
+  background: white;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  position: relative;
+  left: 14%;
+}
+
+#phone #header {
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(var(--lightMagenta)), to(var(--lightViolet)));
+  background: linear-gradient(-90deg, var(--lightMagenta), var(--lightViolet));
+  border-radius: 25px 25px 10px 10px;
+  position: relative;
+}
+
+#phone #header::before {
+  position: absolute;
+  width: 120px;
+  content: "";
+  height: 17px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#phone #header .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 10px 7px;
+}
+
+#phone #header .user .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#phone #header .user .user-info .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  margin: 0 8px;
+}
+
+#phone #header .user .user-info .avatar img {
+  width: 100%;
+}
+
+#phone #header .user .user-info .info .name {
+  color: white;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#phone #header .user .user-info .info .available {
+  color: #d89eff;
+  font-size: 11px;
+}
+
+#phone #background {
+  padding: 10px;
+  background: #f5f3f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  border-radius: 0 0 25px 25px;
+}
+
+#phone #background .messages {
+  width: 100%;
+}
+
+#phone #background .messages .message-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#phone #background .messages .message {
+  display: inline-block;
+  max-width: 140px;
+  font-size: 11px;
+  color: var(--lightViolet);
+  padding: 8px;
+  margin-bottom: 6px;
+}
+
+#phone #background .messages .image-msg {
+  background: none !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#phone #background .messages .image-msg .img-msg {
+  width: 30px;
+  border-radius: 7px;
+  margin: 0 5px;
+}
+
+#phone #background .messages .radio-msg {
+  background: -webkit-gradient(linear, right top, left top, from(var(--lightViolet)), to(var(--lightMagenta))) !important;
+  background: linear-gradient(-90deg, var(--lightViolet), var(--lightMagenta)) !important;
+  padding: 10px;
+  margin-bottom: 6px;
+  font-size: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 155px;
+  position: relative;
+}
+
+#phone #background .messages .radio-msg .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #e570ff;
+  display: inline-block;
+  margin: 0 7px 0 3px;
+}
+
+#phone #background .messages .radio-msg .amount {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+#phone #background .messages .left {
+  background: #eee6f4;
+  border-radius: 10px 10px 10px 3px;
+}
+
+#phone #background .messages .right {
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 3px 10px;
+  margin-left: auto;
+}
+
+#phone #background #sender {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 5px 5px 10px;
+  width: 100%;
+  border-radius: 45px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 25px;
+  max-width: 195px;
+  position: absolute;
+  bottom: 10px;
+}
+
+#phone #background #sender p {
+  font-size: 11px;
+  color: #c6cacd;
+}
+
+#phone #background #sender a {
+  width: 25px;
+  background: #3e2753;
+  border-radius: 50%;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+.hero-text {
+  margin-left: 150px;
+  max-width: 450px;
+}
+
+.hero-text h1 {
+  color: var(--main);
+  font-size: 38px;
+}
+
+.hero-text p {
+  color: var(--light);
+  line-height: 24px;
+}
+/*# sourceMappingURL=main.css.map */

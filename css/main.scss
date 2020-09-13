@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --main: hsl(271, 36%, 24%);
+  --light: hsl(270, 7%, 64%);
+  --lightMagenta: hsl(293, 100%, 63%);
+  --lightViolet: hsl(264, 100%, 61%);
+  --chatLeft: hsl(276, 55%, 52%);
+  --chatRight: hsl(271, 15%, 43%);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*Back and Option button Phone App Header*/
+.back,
+.option {
+  color: hsl(0, 0%, 100%);
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 530px;
+    height: 580px;
+    z-index: -1;
+    background: linear-gradient(
+      225deg,
+      var(--lightMagenta),
+      var(--lightViolet)
+    );
+    border-radius: 0 0 300px 300px;
+    transform: translateX(-20%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 530px;
+    height: 580px;
+    z-index: -1;
+    background: linear-gradient(225deg, hsl(264, 33%, 97%), hsl(264, 33%, 97%));
+    border-radius: 300px 300px 0 0;
+    transform: translateX(6%);
+    bottom: 0px;
+    right: -4%;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4.3rem;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#phone {
+  height: 506px;
+  width: 230px;
+  padding: 6px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  left: 14%;
+
+  #header {
+    width: 100%;
+    background: linear-gradient(
+      -90deg,
+      var(--lightMagenta),
+      var(--lightViolet)
+    );
+    border-radius: 25px 25px 10px 10px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 120px;
+      content: "";
+      height: 17px;
+      background: hsl(0, 0%, 100%);
+      border-radius: 0 0 8px 8px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .user {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 10px 7px;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 2px solid hsl(0, 0%, 100%);
+          margin: 0 8px;
+
+          img {
+            width: 100%;
+          }
+        }
+        .info {
+          .name {
+            color: hsl(0, 0%, 100%);
+            font-weight: 500;
+            font-size: 13px;
+          }
+          .available {
+            color: hsl(276, 100%, 81%);
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  #background {
+    padding: 10px;
+    background: hsl(270, 20%, 96%);
+    display: flex;
+    height: 100%;
+    position: relative;
+    border-radius: 0 0 25px 25px;
+
+    .messages {
+      width: 100%;
+
+      .message-div {
+        display: flex;
+      }
+
+      .message {
+        display: inline-block;
+        max-width: 140px;
+        font-size: 11px;
+        color: var(--lightViolet);
+        padding: 8px;
+        margin-bottom: 6px;
+      }
+
+      .image-msg {
+        background: none !important;
+        display: flex;
+        margin-bottom: 5px;
+        box-shadow: none !important;
+
+        .img-msg {
+          width: 30px;
+          border-radius: 7px;
+          margin: 0 5px;
+        }
+      }
+      .radio-msg {
+        background: linear-gradient(
+          -90deg,
+          var(--lightViolet),
+          var(--lightMagenta)
+        ) !important;
+        padding: 10px;
+        margin-bottom: 6px;
+        font-size: 10px;
+        color: hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        width: 155px;
+        position: relative;
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 1px solid hsl(289, 100%, 72%);
+          display: inline-block;
+          margin: 0 7px 0 3px;
+        }
+
+        .amount {
+          color: hsl(0, 0%, 100%);
+          font-weight: 700;
+          font-size: 16px;
+          margin-left: 10px;
+          position: absolute;
+          right: 10px;
+        }
+      }
+      .left {
+        background: hsl(272, 41%, 93%);
+        border-radius: 10px 10px 10px 3px;
+      }
+      .right {
+        background: hsl(0, 0%, 100%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px 10px 3px 10px;
+        margin-left: auto;
+      }
+    }
+
+    #sender {
+      background: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      padding: 5px 5px 5px 10px;
+      width: 100%;
+      border-radius: 45px;
+      justify-content: space-between;
+      max-height: 25px;
+      max-width: 195px;
+      position: absolute;
+      bottom: 10px;
+
+      p {
+        font-size: 11px;
+        color: hsl(206, 6%, 79%);
+      }
+      a {
+        width: 25px;
+        background: hsl(271, 36%, 24%);
+        border-radius: 50%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hero-text {
+  margin-left: 150px;
+  max-width: 450px;
+
+  h1 {
+    color: var(--main);
+    font-size: 38px;
+  }
+  p {
+    color: var(--light);
+    line-height: 24px;
+  }
+}
